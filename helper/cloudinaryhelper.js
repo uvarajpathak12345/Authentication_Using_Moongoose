@@ -4,8 +4,8 @@ const uploadToCloudinary = async (filepath) => {
     try{
         const response = await cloudinary.uploader.upload(filepath);
         return{
-            url: response.secure_url,
-            publicKey: response.public_id
+            Image_url: response.secure_url,
+            Image_publicKey: response.public_id
         }
 
     }catch(err){
@@ -14,3 +14,5 @@ const uploadToCloudinary = async (filepath) => {
         
     }
 }
+
+module.exports = uploadToCloudinary;
