@@ -63,7 +63,7 @@ const getting = async (req, res) => {
       username:user.username,
       email:user.email,
     }, process.env.JWT_SECRET_KEY , {
-      expiresIn:"15m",
+      expiresIn:"1h",
     })
 
 

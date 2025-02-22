@@ -4,18 +4,17 @@ const Dbconnect = require('./dbConnect/db');
 const authroutes = require('./routing/routes');
 const HomeRoute = require("./routing/home");
 const adminRoute = require("./routing/admin");
-const uploadroute = require("./routing/Images");
+const uploadroute = require("./routing/Images"); // Import the upload route
 
-
-Dbconnect()
+Dbconnect();
 
 const app = express();
 app.use(express.json());
-app.use('/auth' , authroutes);
-app.use('/home' , HomeRoute);
-app.use('/admin' , adminRoute);
-app.use("/upload", uploadroute)
+app.use('/auth', authroutes);
+app.use('/home', HomeRoute);
+app.use('/admin', adminRoute);
+app.use('/upload', uploadroute); // Use the upload route
 
-app.listen(process.env.PORT , () => {
+app.listen(process.env.PORT, () => {
     console.log("server is listening on the port 3000");
-})
+});

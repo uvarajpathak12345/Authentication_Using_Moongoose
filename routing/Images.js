@@ -5,4 +5,5 @@ const uploadMiddleware = require("../middleware/Imagemiddleware");
 const ImageController = require('../controller/Imagecontroller');
 const routes = express.Router();
 
-routes.post("/image" , authmiddleware , adminMiddle , uploadMiddleware.single('image') , ImageController )
+routes.post("/image" , authmiddleware , adminMiddle , uploadMiddleware.single('image'), ImageController )
+module.exports = routes;
