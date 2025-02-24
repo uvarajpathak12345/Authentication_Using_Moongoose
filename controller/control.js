@@ -83,4 +83,9 @@ const getting = async (req, res) => {
   }
 };
 
-module.exports = { posting, getting };
+const Updating = async (req , res) => {
+
+
+}
+
+module.exports = { posting, getting , Updating};
